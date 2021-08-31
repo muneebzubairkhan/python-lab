@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageFilter
 
 i = Image.open('pup1.png')
-i.convert(mode='L').save('pup1_bw.webp')
+i.filter(ImageFilter.GaussianBlur(radius=15)).save('pup1_blur.webp')
