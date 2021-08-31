@@ -3,6 +3,6 @@ import os
 
 for f in os.listdir('.'):
     if f.endswith('.png'):
-        fn,fext = os.path.splitext(f)
-        print(fn)
-
+        i = Image.open(f)
+        fn, fext = os.path.splitext(f)
+        i.save('webp_folder/' + fn + '.webp')
