@@ -1,5 +1,7 @@
 from PIL import Image
+import os
 
-image1 = Image.open('pup1.png')
-image1.save('pup1_new.webp')
+for f in os.listdir('.'):
+    if f.endswith('.png'):
+        print(f)
 
